@@ -8,7 +8,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "generate": "apollo client:codegen --outputFlat=src/apollo/types --target typescript --watch"
+    "generate": "apollo client:codegen --outputFlat=src/graphql/types --target typescript --watch"
   },
   "dependencies": {
     "@apollo/client": "^3.2.5",

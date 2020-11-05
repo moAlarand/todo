@@ -5,10 +5,7 @@ export const cache: InMemoryCache = new InMemoryCache({
     // Query: {
     //   fields: {
     //     // todos: {
-    //     //   merge(ex, ne) {
-    //     //     console.log("eeexxxxxxx", ex);
-    //     //     console.log("neeeeeeeeeeee", ne)
-    //     //     if (ex) return { ...ne, todos: ex.todos }
+    //     //   merge(ex, ne) {s
     //     //     return ne;
     //     //   }
     //     // }

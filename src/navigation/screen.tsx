@@ -4,7 +4,7 @@ import {Navigation, NavigationFunctionComponent} from 'react-native-navigation';
 import {Provider} from 'react-redux';
 import store from '../app/store';
 import {ApolloProvider} from '@apollo/client';
-import {apolloClient} from '../apollo';
+import {apolloClient} from '../graphql';
 
 export interface Screen {
   name: string;

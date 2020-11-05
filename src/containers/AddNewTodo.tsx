@@ -1,8 +1,8 @@
 import React from 'react';
-import {useAddTodo} from '../apollo/mutations/addTodo';
+import {useAddTodo} from '../graphql/hooks';
 import {TodoForm} from '../components/TodoFrom';
 
-export const CeateTodo = () => {
+export const AddNewTodo = () => {
   const {mutate, error, data} = useAddTodo();
   console.log('data', data);
   console.log('error', error);

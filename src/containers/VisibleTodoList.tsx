@@ -1,6 +1,6 @@
 import React from 'react';
 import {Todos} from '../models/Todos';
-import {useGetAllTodos} from '../apollo/queries';
+import {useGetAllTodos} from '../graphql/hooks';
 import {AppText} from '../common';
 import {TodoList} from '../components/TodoList';
 

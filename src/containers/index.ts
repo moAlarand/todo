@@ -1,2 +1,2 @@
-export * from './CreateTodo';
+export * from './AddNewTodo';
 export * from './VisibleTodoList';
