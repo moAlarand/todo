@@ -20,11 +20,11 @@ export const TodoForm: React.FC<formProps> = (props) => {
 
   const _onSumbit = (
     values: Partial<Todo>,
-    formikHandlers: FormikHelpers<Partial<Todo>>,
+    {resetForm}: FormikHelpers<Partial<Todo>>,
   ) => {
     if (values.text) {
       onSumbit(values.text);
-      Navigation.pop('TODO_SCREEN');
+      resetForm();
     }
   };
 
