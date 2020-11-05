@@ -15,13 +15,8 @@ export const TodoList: React.FC<Props> = (props) => {
   return (
     <AppList
       style={{flex: 1}}
-      contentContainerStyle={{
-        padding: 10,
-      }}
       data={todos}
-      renderItem={({item}) => (
-        <TodoItem key={item.id} text={item.text} id={item.id} />
-      )}
+      renderItem={({item}) => <TodoItem key={item.id} todo={item} />}
     />
   );
 };

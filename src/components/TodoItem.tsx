@@ -1,24 +1,25 @@
 import React from 'react';
 import {View} from 'react-native';
 import {AppText, styles} from '../common';
+import {Todo} from '../models/Todos';
 
 interface Props {
-  id: number;
-  text: string;
+  todo: Todo;
 }
 
 export const TodoItem: React.FC<Props> = (props) => {
-  const {text, id} = props;
+  const {
+    todo: {text, id},
+  } = props;
 
   return (
     <View
       style={[
         styles.shadow,
         {
-          width: '100%',
           height: 150,
           padding: 20,
-          margin: 30,
+          margin: 10,
           justifyContent: 'center',
           alignItems: 'center',
         },

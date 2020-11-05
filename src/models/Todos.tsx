@@ -1,5 +1,4 @@
-import {GetAllTodos_todos_edges_node} from '../graphql/types/GetAllTodos';
+import * as todoTypes from '../graphql/types/Todo';
 
-export type Todo = GetAllTodos_todos_edges_node;
-
+export type Todo = todoTypes.Todo;
 export type Todos = Todo[];

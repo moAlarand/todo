@@ -44,7 +44,11 @@ export const TodoForm: React.FC<formProps> = (props) => {
             style={styles.input}
             errorStyle={styles.error}
           />
-          <AppButton title="add to do" onPress={handleSubmit} />
+          <AppButton
+            style={{flex: 1}}
+            title="add to do"
+            onPress={handleSubmit}
+          />
         </View>
       )}
     </Formik>
@@ -53,12 +57,16 @@ export const TodoForm: React.FC<formProps> = (props) => {
 
 const styles = StyleSheet.create({
   container: {
-    margin: 10,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    margin: 20,
     padding: 10,
     borderRadius: 10,
     ...cStyles.shadow,
   },
   input: {
+    flex: 2,
     alignSelf: 'stretch',
     padding: 10,
     margin: 10,
