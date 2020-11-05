@@ -1,17 +1,16 @@
 import { onError } from '@apollo/client/link/error';
 
 
-export enum DataErrorsTypes {
+export enum ErrorsTypes {
   ConnectionError,
   GeneralError
 }
 
-export class DataError extends Error {
-  constructor(message: string, public type: DataErrorsTypes) { super(message); }
+export class DataError<T> extends Error {
+  constructor(message: string, public type: ErrorsTypes, public Data: T) { super(message); }
 }
 
-export const HandleErrosLink = onError(({ graphQLErrors, networkError }) => {
+export const HandleErrosLink = onError(({ graphQLErrors, networkError, forward }) => {
   if (graphQLErrors) console.log(`graph`)
-
   if (networkError) console.log(networkError);
 });
